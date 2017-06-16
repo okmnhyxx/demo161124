@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emi.repository.mapper.UserMapper">
+
+       <select id="searchUser" resultType="User" parameterType="Map">
+              select u.* from user_ u where u.if_delete = false
+              <if test="name != null">
+                  and u.name like '%'||#{name}||'%'
+              </if>
+              <if test="nickName != null">
+                  and u.nickName like '%'||#{nickName}||'%'
+              </if>
+              <if test="state != null">
+                  and u.state = #{state}
+              </if>
+              <if test="createTimeFrom != null">
+                  and u.createTime &gt;= to_date(#{createTimeFrom},'yyyy-MM-dd')
+              </if>
+              <if test="createTimeTo != null">
+                  and u. createTime &lt;= to_date(#{createTimeTo},'yyyy-MM-dd')
+              </if>
+       </select>
+
+</mapper>

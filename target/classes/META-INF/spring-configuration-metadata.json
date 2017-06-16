@@ -1,0 +1,45 @@
+{
+  "groups": [
+    {
+      "name": "self.test",
+      "type": "com.emi.config.SystemProperties",
+      "sourceType": "com.emi.config.SystemProperties"
+    },
+    {
+      "name": "self.test.work",
+      "type": "com.emi.config.SystemProperties$Work",
+      "sourceType": "com.emi.config.SystemProperties",
+      "sourceMethod": "getWork()"
+    },
+    {
+      "name": "self.test.work.career",
+      "type": "java.lang.String",
+      "sourceType": "com.emi.config.SystemProperties$Work",
+      "sourceMethod": "getCareer()"
+    },
+    {
+      "name": "self.test.work.year",
+      "type": "java.lang.Integer",
+      "sourceType": "com.emi.config.SystemProperties$Work",
+      "sourceMethod": "getYear()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "self.test.name",
+      "type": "java.lang.String",
+      "sourceType": "com.emi.config.SystemProperties"
+    },
+    {
+      "name": "self.test.password",
+      "type": "java.lang.String",
+      "sourceType": "com.emi.config.SystemProperties"
+    },
+    {
+      "name": "self.test.secret",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.emi.config.SystemProperties"
+    }
+  ],
+  "hints": []
+}
